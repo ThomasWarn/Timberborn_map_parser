@@ -3,12 +3,11 @@ import zipfile
 from os import getcwd, path, makedirs
 import json
 
-def extract_map(map_filename):
+def extract_map(map_filename, temp_folder):
     #extracts the map file to a zip.
     #inputs: map filename
     #outputs: extracted file, filepath.
 
-    temp_folder = "extracted_map"
     current_dir = getcwd()
     abs_path = path.join(current_dir, map_filename)
     
@@ -42,9 +41,9 @@ def convert_json(map_extract_location):
     
     return data
 
-def parse_map(map_filename):
+def parse_map(map_filename, temp_folder):
     #extracts map file from zip into new folder.
-    map_extract_location = extract_map(map_filename)
+    map_extract_location = extract_map(map_filename, temp_folder)
     #parses map into json
     map_data = convert_json(map_extract_location)
     return map_data
