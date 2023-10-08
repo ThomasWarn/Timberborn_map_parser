@@ -45,10 +45,10 @@ def convert_json(map_extract_location):
 def parse_map(map_filename):
     #extracts map file from zip into new folder.
     map_extract_location = extract_map(map_filename)
-
     #parses map into json
     map_data = convert_json(map_extract_location)
+    return map_data
 
-if __name__ == "__main__":
-    filename = "Blank_128_128.timber"
-    parse_map(filename)
+#if __name__ == "__main__":
+#    filename = "Blank_128_128.timber"
+#    parse_map(filename)
