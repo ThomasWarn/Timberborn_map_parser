@@ -50,5 +50,5 @@ def parse_map(map_filename):
     map_data = convert_json(map_extract_location)
 
 if __name__ == "__main__":
-    filename = "Mountain River.timber"
+    filename = "Blank_128_128.timber"
     parse_map(filename)
