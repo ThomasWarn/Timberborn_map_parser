@@ -91,7 +91,7 @@ if __name__ == "__main__":
     output_folder_name = "Output"
     image_filename = "Iceland_01_512x512.png"
     blur_factor = 5 #should be an odd number as the radius (eg. 1, 3, 5)
-    squish_vertical = 0.5 #value from 0 to 1. 0 is flat, 1 is normalized scale.
+    squish_vertical = 0.34 #value from 0 to 1. 0 is flat, 1 is normalized scale.
     #loads template.
     template_data = parse_map(template_filename, temp_folder)
     #loads input image, rescales input image to correct size / resolution / heights.
