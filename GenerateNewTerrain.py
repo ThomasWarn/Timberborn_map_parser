@@ -33,8 +33,8 @@ def load_image(image_filename, squish_vertical, template_data, blur_factor):
     
     #rescale the image to fit the template map.
     template_size = template_data["Singletons"]["MapSize"]["Size"]
-    x_size = template_size["X"]
-    y_size = template_size["Y"]
+    x_size = template_size["Y"]
+    y_size = template_size["X"]
     image_shape = gray_image_scaled.shape
 
     if image_shape != (y_size, x_size):
@@ -85,13 +85,13 @@ def export_map(modified_template_data, output_filename, output_folder_name, temp
 
 
 if __name__ == "__main__":
-    template_filename = "Blank_512_512.timber"
+    template_filename = "Blank_1024_454.timber"
     temp_folder = "extracted_map"
     output_filename = "Output.timber"
     output_folder_name = "Output"
-    image_filename = "Iceland_01_512x512.png"
-    blur_factor = 5 #should be an odd number as the radius (eg. 1, 3, 5)
-    squish_vertical = 0.34 #value from 0 to 1. 0 is flat, 1 is normalized scale.
+    image_filename = "GC_Test_quarter_modified.png"
+    blur_factor = 9 #should be an odd number as the radius (eg. 1, 3, 5)
+    squish_vertical = 0.4 #value from 0 to 1. 0 is flat, 1 is normalized scale.
     #loads template.
     template_data = parse_map(template_filename, temp_folder)
     #loads input image, rescales input image to correct size / resolution / heights.
